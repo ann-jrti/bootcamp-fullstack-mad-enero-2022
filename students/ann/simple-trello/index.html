@@ -13,7 +13,7 @@
     <!-- project header -->
     <header class="project__header">
         <div class="project__description">
-            <h2 class="project__title">Final project</h2>
+            <h3 class="project__title">final-project</h3>
             <p class="project__date">Updated on 8 Dec 2021</p>
         </div>
 
@@ -40,29 +40,83 @@
 
     <!-- cards -->
 
-    <main class="project__cards-container">
-        <div class="project__todo-cards">
-            <div class="project__info-card">
-                <p class="project__card-counter"></p>
-                <p class="project__card-name"></p>
-            </div>
-            <div class="project__info-card">
-                <p class="project__card-counter"></p>
-                <p class="project__card-name"></p>
-            </div>
-        </div>
+        <!-- card column name -->
+    <div class="project__cards">
+        <main class="project__cards-container">
+            <!-- to-do cards -->
+            <div class="project__todo-column card">
+                
+                <!-- card column settings -->
+                <div class="project__card-header">
+                    <div class="project__info-card">
+                        <p class="project__card-counter counter">4</p>
+                        <p class="project__card-name card-name">to do</p>
+                    </div>
+                    <div class="project__tools-card">
+                        <div class="project__add-task">+</div>
+                        <div class="project__card-menu">...</div>
+                    </div>
+                </div>
+                 
+                <!-- individual card tasks -->
+                <div class="project__individual-card">
+                    <div class="project__card-topic">
+                        <i class="project__card-icon">></i>
+                        <p class="project__text-card">Como usuario cliente quiero encontrar mediante golocalización los mozos de mudanza en mi misma ciudad</p>
+                        <div class="project__card-menu">...</div>
+                    </div>
+                        <p class="project__card-author">#4 opened by JoseAtovarC</p>
+                    </div>
+                </div>
 
-        <div class="project__cards-inprogress">
-            <div class="info-card">
-
-            </div>
-        </div>
-
-        <div class="project__cards-done">
-            <div class="info-card">
-
-            </div>
-        </div>
+             <!-- in progress cards -->
+            <div class="project__column-inprogress card">
+                 <!-- card column settings -->
+                 <div class="project__card-header">
+                    <div class="project__info-card">
+                        <p class="project__card-counter counter">0</p>
+                        <p class="project__card-name card-name">in progress</p>
+                    </div>
+                    <div class="project__tools-card">
+                        <div class="project__add-task">+</div>
+                        <div class="project__card-menu">...</div>
+                    </div>
+                </div>
+                 <!-- individual card tasks -->
+                 <div class="project__individual-card">
+                    <div class="project__card-topic">
+                        <i class="project__card-icon">></i>
+                        <p class="project__text-card">Como usuario cliente quiero encontrar mediante golocalización los mozos de mudanza en mi misma ciudad</p>
+                        <div class="project__card-menu">...</div>
+                    </div>
+                        <p class="project__card-author">#4 opened by JoseAtovarC</p>
+                    </div>
+                </div>
+             <!-- done cards -->
+            <div class="project__column-done card">
+                 <!-- card column settings -->
+                 <div class="project__card-header">
+                    <div class="project__info-card">
+                        <div>
+                            <p class="project__card-counter counter">14</p>
+                        </div>
+                        <p class="project__card-name card-name">done</p>
+                    </div>
+                    <div class="project__tools-card">
+                        <div class="project__add-task">+</div>
+                        <div class="project__card-menu">...</div>
+                    </div>
+                </div>
+                 <!-- individual card tasks -->
+                 <div class="project__individual-card">
+                    <div class="project__card-topic">
+                        <i class="project__card-icon">></i>
+                        <p class="project__text-card">Como usuario cliente quiero encontrar mediante golocalización los mozos de mudanza en mi misma ciudad</p>
+                        <div class="project__card-menu">...</div>
+                    </div>
+                        <p class="project__card-author">#4 opened by JoseAtovarC</p>
+                    </div>
+                </div>
     </main>
 
     <script src="script.js"></script>
