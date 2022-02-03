@@ -1,5 +1,6 @@
 const chuches = [];
 const userChuches = JSON.parse(localStorage.getItem('chuches')) ?? []
+const votess = document.querySelector
 
 const sugus = {
     name: 'Sugus',
@@ -27,20 +28,20 @@ const lacasitos = {
 
 chuches.push(sugus, petaZeta, regaliz, lacasitos)
 
-function addChuche(c, chucheN, chucheD) {
+function addChuche(c) {
     const chuche = document.createElement('li')
     chuche.classList.add('chuche__type')
 
     const chucheInfo = document.createElement('div')
-    chucheInfo.classList.add('.chuche__info')
+    chucheInfo.classList.add('chuche__info')
 
     const chucheName = document.createElement('h2')
-    chucheName.classList.add('.chuche__name')
-    chucheName.textContent = c.name ?? chucheN
+    chucheName.classList.add('chuche__name')
+    chucheName.textContent = c.name
 
     const chucheDescription = document.createElement('p')
-    chucheDescription.classList.add('.chuche__description')
-    chucheDescription.textContent = c.description ?? chucheD
+    chucheDescription.classList.add('chuche__description')
+    chucheDescription.textContent = c.description
 
     const buttonContainer = document.createElement('div')
     buttonContainer.classList.add('chuche__btn-container')
@@ -66,10 +67,9 @@ function addChuche(c, chucheN, chucheD) {
 
     button.addEventListener('click', (e) => {
         votesCounter.textContent ++
+        c.votes ++
     })
 }
-
-
 
 //user adds chuche
 
@@ -78,7 +78,7 @@ function userAddsChuche() {
 
     submit.addEventListener('click', e => {
         e.preventDefault();
-
+        storageUserChuches();
         const nameUserChuche = document.querySelector('#chuche-name-user').value
         const descriptionUserChuche = document.querySelector('#chuche-description-user').value
 
@@ -87,29 +87,43 @@ function userAddsChuche() {
             description: descriptionUserChuche,
             votes: 0
         }
-        userChuches.push(userChuche);
+
+        chuches.push(userChuche);
         addChuche(userChuche);
-        storageUserChuches();
+        
     })
-   
 }
 
 // saves chuche in session storage
 function storageUserChuches() {
-    sessionStorage.setItem('chuches', JSON.stringify(userChuches))
+    sessionStorage.setItem('chuches', JSON.stringify(chuches))
 }
 
 // sort and filter chuches
-function sortCandy() {
-    document.querySelector()
+
+function sortCandy () {
+
+    if (document.getElementById('chuches__select').value === 'chuches__high-to-low') {
+        const sortedCandy = chuches.sort((a, b) => a.votes - b.votes)
+        sortedCandy.forEach( c => addChuche(c))
+    } else if (document.getElementById('chuches__select').value === 'chuches__low-to-high') {
+        const sortedCandy = chuches.sort((a, b) => b.votes - a.votes)
+        sortedCandy.forEach( c => addChuche(c))
+    }
+    console.log(chuches);
 }
 
 
-
+// document.querySelectorAll('.option').forEach( e => {
+//     e.value.addEventListener('click', e => {
+//         sortCandy()
+//     })
+// })
 
 chuches.forEach( (c) => addChuche(c))
 userAddsChuche()
 
+console.log(document);
 
 
 

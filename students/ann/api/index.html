@@ -5,36 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/4b4736c94b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
     <title>Document</title>
 </head>
 <body>
     <header class="chuches__header">
-        <h1 class="chuches__title">Vota tu chuche favorita</h1>
+        <h1 class="chuches__title">Vota la golosina</h1>
     </header>
 
     <section class="chuches__filter">
         <form id="chuches__filter-form">
-            <label for="">Filtra por votos</label>
+            <label id="chuches__filter-text">Ordena por votos</label>
             <select name="chuches__sort" id="chuches__select">
                 <option disabled selected value> -- Selecciona una opción -- </option>
-                <option value="chuches__high-to-low">De mayor a menor</option>
-                <option value="chuches__high-to-low">De menor a mayor</option>
+                <option class="option" value="chuches__high-to-low" id="chuches__high-to-low">De mayor a menor</option>
+                <option class="option" value="chuches__low-to-high" id="chuches__low-to-high">De menor a mayor</option>
             </select>
         </form>
     </section>
     
     <section class="chuches__add-section">
-        <h2 class="chuches__title-add-section">Añade tu propia chuche</h2>
-
+       
+            <h2 class="chuches__title-add-section">Añade tu propia chuche</h2>
+      
         <form id="add-chuche" class="chuches__user-add">
-            <label for="name">Nombre</label>
-            <input id="chuche-name-user" for="name" type="text">
+            <div class="chuches__inputs">
+                <label for="name">Nombre</label>
+                <input id="chuche-name-user" for="name" type="text" required>
 
             <label for="description">Descripción</label>
-            <input id="chuche-description-user" for="description" type="text">
-
+            <input id="chuche-description-user" for="description" type="text" required>
+        </div>
+       
             <input id="submit" type="submit" value="publicar">
+   
+           
         </form>
     </section>
 
