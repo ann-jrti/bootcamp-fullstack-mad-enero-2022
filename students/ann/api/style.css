@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100vh;
+    position: absolute;
+    background-image: url('https://cdn.pixabay.com/photo/2019/10/02/03/50/candy-pattern-4519903_1280.jpg');
+    background-repeat: repeat;
+}
+
+/* header */
+.chuches__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 5rem;
+    position: relative;
+    top: 0;
+    -webkit-box-shadow: 2px 3px 13px 2px rgba(133,133,133,0.59);
+    -moz-box-shadow: 2px 3px 13px 2px rgba(133,133,133,0.59);
+    box-shadow: 2px 3px 13px 2px rgba(133,133,133,0.59);
+    }
+
+.chuches {
+    margin: 3rem;
+}
+
+.chuches__title {
+    margin-bottom: 2rem;
+}
+
+.chuche__type {
+    color: rgb(61, 61, 61);
+    max-width: 20rem;
+    max-height: 100rem;
+    background-color: rgb(253, 253, 253);
+    padding: 1rem;
+    list-style: none;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 6px 6px 4px 4px rgba(176,176,176,0.13); 
+    box-shadow: 0px 10px 13px -7px #000000, 6px 6px 4px 4px rgba(176,176,176,0.13);
+}
+
+/* chuches list */
+
+.chuches__list {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* chuche info */
+
+.chuche__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chuche__name {
+    margin-bottom: 1rem;
+}
+
+.chuche__description {
+    margin: 0 .4rem;
+    text-align: center;
+}
+
+/* button */
+.chuche__btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.chuche__vote-btn {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(207, 252, 10);
+}
+
+.chuche__vote-btn:hover {
+    cursor: pointer;
+}
+
