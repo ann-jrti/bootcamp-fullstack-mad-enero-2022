@@ -92,3 +92,16 @@ body {
     cursor: pointer;
 }
 
+/* add-section */
+
+.chuches__add-section {
+    color: white;
+    display: flex;
+    margin: 3rem;
+    padding: 1rem;
+    flex-direction: column;
+    background-color: rgb(41, 41, 41);
+    width:fit-content;
+    height: 6rem;
+    border-radius: 10px;
+}

@@ -1,4 +1,5 @@
-const chuches = []
+const chuches = [];
+const userChuches = [];
 
 const sugus = {
     name: 'Sugus',
@@ -26,7 +27,7 @@ const lacasitos = {
 
 chuches.push(sugus, petaZeta, regaliz, lacasitos)
 
-function addChuche(c) {
+function addChuche(c, chucheN, chucheD) {
     const chuche = document.createElement('li')
     chuche.classList.add('chuche__type')
 
@@ -35,11 +36,11 @@ function addChuche(c) {
 
     const chucheName = document.createElement('h2')
     chucheName.classList.add('.chuche__name')
-    chucheName.textContent = c.name
+    chucheName.textContent = c.name ?? chucheN
 
     const chucheDescription = document.createElement('p')
     chucheDescription.classList.add('.chuche__description')
-    chucheDescription.textContent = c.description
+    chucheDescription.textContent = c.description ?? chucheD
 
     const buttonContainer = document.createElement('div')
     buttonContainer.classList.add('chuche__btn-container')
@@ -68,5 +69,35 @@ function addChuche(c) {
     })
 }
 
+
+
+//user adds chuche
+
+function userAddsChuche() {
+    const submit = document.querySelector('#submit')
+    submit.addEventListener('click', e => {
+        e.preventDefault();
+        const nameUserChuche = document.querySelector('#chuche-name-user').value
+        const descriptionUserChuche = document.querySelector('#chuche-description-user').value
+        const userChuche = {
+            name: nameUserChuche,
+            description: descriptionUserChuche,
+            votes: 0
+        }
+        userChuches.push(userChuche)
+        addChuche(userChuche)
+    })
+    storageUserChuches()
+}
+
+function storageUserChuches() {
+    sessionStorage.setItem('chuches del user', userChuches)
+}
+
+
 chuches.forEach( (c) => addChuche(c))
+userAddsChuche()
+
+
+
 

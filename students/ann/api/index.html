@@ -10,9 +10,22 @@
 </head>
 <body>
     <header class="chuches__header">
-        <h1 class="chuches__title">Vota tu gominola favorita</h1>
+        <h1 class="chuches__title">Vota tu chuche favorita</h1>
     </header>
     
+    <section class="chuches__add-section">
+        <h2 class="chuches__title-add-section">Añade tu propia chuche</h2>
+
+        <form id="add-chuche" class="chuches__user-add">
+            <label for="name">Nombre</label>
+            <input id="chuche-name-user" for="name" type="text">
+
+            <label for="description">Descripción</label>
+            <input id="chuche-description-user" for="description" type="text">
+
+            <input id="submit" type="submit" value="publicar">
+        </form>
+    </section>
 
     <main class="chuches">
         <ul class="chuches__list">
