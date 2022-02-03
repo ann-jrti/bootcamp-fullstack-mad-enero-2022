@@ -95,13 +95,28 @@ body {
 /* add-section */
 
 .chuches__add-section {
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
     margin: 3rem;
     padding: 1rem;
     flex-direction: column;
-    background-color: rgb(41, 41, 41);
+    background-color: rgb(217, 241, 107);
     width:fit-content;
     height: 6rem;
     border-radius: 10px;
+}
+
+/* filter */
+
+.chuches__filter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 3rem;
+    background-color: rgb(253, 253, 253);
+    width: fit-content;
+    height: 2rem;
+    padding: 1.3rem;
+    border-radius: 10px;
+    border: 1px solid rgb(207, 252, 10);
 }

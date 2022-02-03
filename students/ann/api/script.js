@@ -1,5 +1,5 @@
 const chuches = [];
-const userChuches = [];
+const userChuches = JSON.parse(localStorage.getItem('chuches')) ?? []
 
 const sugus = {
     name: 'Sugus',
@@ -75,24 +75,36 @@ function addChuche(c, chucheN, chucheD) {
 
 function userAddsChuche() {
     const submit = document.querySelector('#submit')
+
     submit.addEventListener('click', e => {
         e.preventDefault();
+
         const nameUserChuche = document.querySelector('#chuche-name-user').value
         const descriptionUserChuche = document.querySelector('#chuche-description-user').value
+
         const userChuche = {
             name: nameUserChuche,
             description: descriptionUserChuche,
             votes: 0
         }
-        userChuches.push(userChuche)
-        addChuche(userChuche)
+        userChuches.push(userChuche);
+        addChuche(userChuche);
+        storageUserChuches();
     })
-    storageUserChuches()
+   
 }
 
+// saves chuche in session storage
 function storageUserChuches() {
-    sessionStorage.setItem('chuches del user', userChuches)
+    sessionStorage.setItem('chuches', JSON.stringify(userChuches))
 }
+
+// sort and filter chuches
+function sortCandy() {
+    document.querySelector()
+}
+
+
 
 
 chuches.forEach( (c) => addChuche(c))
