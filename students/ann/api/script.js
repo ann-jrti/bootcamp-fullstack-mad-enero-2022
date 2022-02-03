@@ -10,7 +10,7 @@ const sugus = {
 
 const petaZeta = {
     name: 'Peta Zeta',
-    description: `Peta Zeta es un caramelo carbonatado, también conocido como caramelo con chasquidos.`,
+    description: `Caramelo carbonatado, también conocido como caramelo con chasquidos.`,
     votes: 0
 }
 
