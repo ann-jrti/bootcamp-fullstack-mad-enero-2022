@@ -1,12 +1,11 @@
 
-import './App.css';
 import InputFather from './components/input-father';
 import CountriesList from './components/countries-list';
 
 function App() {
   return (
     <div className="App">
-      <InputFather></InputFather>
+      {/* <InputFather></InputFather> */}
       <CountriesList></CountriesList>
     </div>
   );
