@@ -10,8 +10,18 @@
     margin-right: 10px;
 }
 
+.avatar__status-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .avatar__status {
     width: 10px;
     height: 10px;
     border-radius: 50%;
+}
+
+.avatar__name {
+    margin-left: 8px;
 }
