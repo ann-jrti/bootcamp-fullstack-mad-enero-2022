@@ -1,6 +1,6 @@
 import './style.css'
 
-function CharacterCard() {
+function CharacterCard({name, }) {
  
     return(
         <article className="RM__character">
@@ -10,7 +10,12 @@ function CharacterCard() {
 
                 <div className="RM__character-status">
                     <div className="RM__character-light-status"></div>
-                    <p className="RM__character-race">Unknown - Human</p>
+                    <div className="RM__character-main-info-container">
+                        <p className="RM__character-alive-status">Unknown</p>
+                        <p>-</p>
+                        <p className="RM__character-race">Human</p>
+                    </div>
+                   
                 </div>
 
                 <div className="RM__info-container RM__last-location-container">
