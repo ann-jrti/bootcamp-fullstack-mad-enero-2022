@@ -19,6 +19,8 @@ function PokeList() {
       })
   }, []);
 
+  console.log(pokemons);
+
     const printPokemonCard = pokemons.map(pokemon => {
         return <PokeCard
           img={pokemon.sprites.front_default}

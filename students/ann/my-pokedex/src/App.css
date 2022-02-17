@@ -1,5 +1,10 @@
 .App {
-display: flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.pokemon__cards {
+  display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap
 }

@@ -1,0 +1,9 @@
+.pokemon__header {
+    background-color: rgb(175, 50, 50);
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
