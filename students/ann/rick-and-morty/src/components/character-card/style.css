@@ -1,0 +1,62 @@
+.RM__character {
+    display: flex;
+    align-items: center;
+    background-color: #3C3E44;
+    max-width: 500px;
+    max-height: 170px;
+    border-radius: 20px;
+    color: white;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 2px;
+}
+
+.RM__character-img {
+    width: 170px;
+    border-radius: 10px 0 0 10px;
+}
+
+.RM__character-name {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/*status*/
+
+.RM__character-status {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.RM__character-light-status {
+    width: 8px;
+    height: 8px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.RM__character-race {
+    font-size: .7rem;
+    font-weight: 500;
+}
+
+/* info */
+.RM__info-container {
+    margin: 5px 0;
+}
+.RM__last-location, .RM__first-seen {
+    font-size: .7rem;
+    color: #a1a1a1;
+}
+
+.RM__last-location-value, .RM__first-seen-value {
+    font-size: .8rem;
+    color: #e2e2e2;
+}
+
