@@ -1,0 +1,18 @@
+article {
+    background-color: aquamarine;
+    width: 7rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: .3rem;
+}
+h2 {
+    font-size: .8rem;
+}
+
+img {
+    width: 7rem;
+    border-radius: .3rem;
+}
