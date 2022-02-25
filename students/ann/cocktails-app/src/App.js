@@ -10,30 +10,35 @@ import ProtectedRoutes from './routes/protected-routes';
 import Footer from './components/footer';
 import AcceptConditions from './pages/accept-conditions';
 import Home from './pages/home';
+import { AgeRestrictionProvider } from './context/restriction';
+
 
 function App() {
   return (
-      <React.Fragment>
-        
+    <React.Fragment>
+      <AgeRestrictionProvider>
+
+
         <BrowserRouter>
-        <Header></Header>
+          <Header></Header>
           <Routes>
             <Route path="/accept-conditions" element={<AcceptConditions></AcceptConditions>}></Route>
-            <Route path="/" element={<ProtectedRoutes><Home/></ProtectedRoutes>}></Route>
+            <Route path="/" element={<ProtectedRoutes><Home /></ProtectedRoutes>}></Route>
             <Route path="/cocktails" element={<ProtectedRoutes><Cocktails /></ProtectedRoutes>}></Route>
             <Route path="/drinks" element={<ProtectedRoutes><Drinks /></ProtectedRoutes>}></Route>
-            <Route path="/info" element={<Info></Info>}></Route>
-            <Route path="/details" element={<Details></Details>}></Route>
+            <Route path="/info" element={<ProtectedRoutes><Info /></ProtectedRoutes>}></Route>
+            <Route path="/details" element={<ProtectedRoutes><Details /></ProtectedRoutes>}></Route>
           </Routes>
           <Footer></Footer>
         </BrowserRouter>
-        {/* <NumberProvider>
+      </AgeRestrictionProvider>
+      {/* <NumberProvider>
           <Home></Home>
         </NumberProvider> */}
 
     </React.Fragment>
-      
-   
+
+
   );
 }
 

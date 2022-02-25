@@ -1,12 +1,14 @@
 import { createContext } from "react";
+import { useState } from "react";
 
-const restriction = createContext()
+const ageRestriction = createContext();
 
-function restrictionProvider({children}) {
-    let older = useState(false)
- 
-    return <restriction.Provider value={older}>{children}</restriction.Provider>
- } 
+function AgeRestrictionProvider({ children }) {
+    const ageState = useState(false)
+    console.log(ageState);
 
-export default restriction;
-export { restrictionProvider };
+    return <ageRestriction.Provider value={ageState}>{children}</ageRestriction.Provider>
+}
+
+export default ageRestriction;
+export { AgeRestrictionProvider };
