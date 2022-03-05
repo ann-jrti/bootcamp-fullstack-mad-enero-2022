@@ -1,0 +1,22 @@
+[
+  {
+    "name": "table",
+    "price": 1200,
+    "id": "e5805757-763c-432e-b150-843108f8dd10"
+  },
+  {
+    "name": "shirt",
+    "price": 25,
+    "id": "e5822757-763c-432e-b150-343108f8dd13"
+  },
+  {
+    "name": "spaceship",
+    "price": 1000000,
+    "id": "e5803757-763c-432e-b150-843108f8dd10"
+  },
+  {
+    "name": "patata freir",
+    "price": 50,
+    "id": "10"
+  }
+]
